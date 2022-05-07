@@ -26,3 +26,8 @@ Route::get('/', [HomeController::class, 'index']);
 // Author routes
 
 Route::get('/authors', [AuthorController::class, 'list']);
+Route::get('/authors/create', [AuthorController::class, 'create']);
+Route::post('/authors/put', [AuthorController::class, 'put']);
+Route::get('/authors/update/{author}', [AuthorController::class, 'update']);
+Route::post('/authors/patch/{author}', [AuthorController::class, 'patch']);
+Route::get('/authors/delete/{author}', [AuthorController::class, 'delete']);
