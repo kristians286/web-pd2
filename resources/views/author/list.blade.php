@@ -1,7 +1,7 @@
 
 @extends('layout')
 
-@extends('content')
+@section('content')
 
     <h1>{{ $title }}</h1>
 
@@ -21,7 +21,14 @@
             <tr>
                 <td>{{ $author->id }}</td>
                 <td>{{ $author->name }}</td>
-                <td>Labot / Dzēst</td>
+                <td> 
+                    <a href="/authors/update/{{ $author->id }}" class="btn btn-outline-primary btn-sm">Labot</a>
+                    / 
+                    <form action="/authors/delete/{{ $author->id}}" method="post" class="d-inline deletion-form">
+                        @csrf
+                        <button type="submit" class="btn btn-outline-danger btn-sm">Dzēst</button>
+                    </form>
+                </td>
             </tr>
             @endforeach
 
@@ -34,6 +41,6 @@
 
     @endif
 
-    <a herf="/authors/create" >Izveidot jaunu</a>
+    <a href="/authors/create" class="btn btn-primary">Izveidot jaunu</a>
 
 @endsection

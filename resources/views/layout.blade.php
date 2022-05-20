@@ -14,7 +14,7 @@
     <div class="bg-light mb-4 py-4">
             <div class="container">
                 <div class="row">
-                    <header class="col-md-12 offset-md-3">
+                    <header class="col-md-12">
                         <nav class="navbar navbar-light navbar-expand-md">
 
                             <span class="navbar-brand mb-0 h1">Kristians Kalnins</span>
@@ -34,6 +34,10 @@
                                         <a class="nav-link" href="/authors">Autori</a>
                                     </li>
 
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="/books">Grāmatas</a>
+                                    </li>
+
                                 </ul>
                             </div>
 
@@ -45,7 +49,7 @@
         
         <div class="container mb-4">
             <div class="row">
-                <main class="col-md-6 offset-md-3">
+                <main class="col-md-12">
                     
                      @yield('content')
 
