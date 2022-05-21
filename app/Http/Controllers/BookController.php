@@ -9,7 +9,10 @@ use App\Http\Requests\BookRequest;
 
 class BookController extends Controller
 {
-    
+    public function __construct()
+    {
+        $this->middleware('auth');
+    }
     // Display all books
     public function list(){
         
