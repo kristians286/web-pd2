@@ -6,7 +6,7 @@
     <h1>{{ $title }}</h1>
 
     @if (count($items) > 0)
-
+    <script src="/js/main.js"></script>
     <table class="table table-striped table-hover table-sm">
             <thead class="thead-light">
                 <tr>

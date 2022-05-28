@@ -6,7 +6,7 @@
     <h1>{{ $title }}</h1>
 
     @if (count($items) > 0)
-
+    <script src="/js/main.js"></script>
         <table class="table table-sm table-hover table-striped">
             <thead class="thead-light">
                 <tr>
@@ -43,6 +43,7 @@
                             <button
                                 type="submit"
                                 class="btn btn-outline-danger btn-sm"
+                                
                             >Dzēst</button>
                         </form>
                     </td>

@@ -45,8 +45,9 @@ class BookController extends Controller
 
     private function saveBookData(Book $book, BookRequest $request){
 
-        $validatedData = $request->validate();   
-        $book->fill($validatedData);
+        $validatedData = $request->validated();
+        $book -> fill($validatedData);
+
         //$book->display = (bool) ($validatedData['display'] ?? false);
 
         if (isset($validatedData['display']) && $validatedData['display']) {
